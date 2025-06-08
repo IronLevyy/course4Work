@@ -22,6 +22,10 @@ public class NotificationTask {
     @Column(name = "notification_datetime", nullable = false)
     private LocalDateTime notificationDateTime;
 
+    @Column(name = "sent", nullable = false)
+    private boolean sent = false;
+
+
     public NotificationTask() {}
 
     public NotificationTask(Long chatId, String notificationText, LocalDateTime notificationDateTime) {
@@ -56,6 +60,14 @@ public class NotificationTask {
 
     public void setNotificationDateTime(LocalDateTime notificationDateTime) {
         this.notificationDateTime = notificationDateTime;
+    }
+
+    public boolean isSent() {
+        return sent;
+    }
+
+    public void setSent(boolean sent) {
+        this.sent = sent;
     }
 }
 

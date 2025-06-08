@@ -20,6 +20,9 @@
             <column name="notification_datetime" type="TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
+            <column name="sent" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 </databaseChangeLog>
